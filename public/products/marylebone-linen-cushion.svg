@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- plump linen cushion -->
+  <path
+    d="M32 100 C32 72 46 60 80 60 C114 60 128 72 128 100 C128 128 114 140 80 140 C46 140 32 128 32 100 Z"
+    fill="#e9dfc8" stroke="#22201b" stroke-width="3" stroke-linejoin="round"
+  />
+  <!-- corner tucks -->
+  <path d="M40 74 L50 84 M120 74 L110 84 M40 126 L50 116 M120 126 L110 116" stroke="#c9b892" stroke-width="3" stroke-linecap="round" />
+  <!-- centre button -->
+  <circle cx="80" cy="100" r="6" fill="#bc4b21" stroke="#22201b" stroke-width="3" />
+  <!-- soft creases -->
+  <path d="M62 100 C68 94 74 94 78 98 M82 102 C88 106 94 106 100 100" fill="none" stroke="#c9b892" stroke-width="3" stroke-linecap="round" />
+</svg>

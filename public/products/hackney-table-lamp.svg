@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- paper shade -->
+  <path
+    d="M56 34 h48 l12 52 h-72 z"
+    fill="#f4efe6" stroke="#22201b" stroke-width="3" stroke-linejoin="round"
+  />
+  <!-- warm glow -->
+  <ellipse cx="80" cy="92" rx="22" ry="6" fill="#e8a13c" opacity="0.55" />
+  <!-- turned ash stem -->
+  <rect x="75" y="88" width="10" height="52" rx="4" fill="#b3855a" stroke="#22201b" stroke-width="3" />
+  <circle cx="80" cy="112" r="9" fill="#b3855a" stroke="#22201b" stroke-width="3" />
+  <!-- base -->
+  <ellipse cx="80" cy="150" rx="30" ry="11" fill="#96683f" stroke="#22201b" stroke-width="3" />
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- flames -->
+  <path d="M61 42 C61 34 66 30 66 24 C66 30 71 34 71 42 A5 5 0 0 1 61 42 Z" fill="#e8a13c" stroke="#22201b" stroke-width="2.5" />
+  <path d="M89 62 C89 54 94 50 94 44 C94 50 99 54 99 62 A5 5 0 0 1 89 62 Z" fill="#e8a13c" stroke="#22201b" stroke-width="2.5" />
+  <!-- hand-dipped candles -->
+  <rect x="60" y="50" width="12" height="88" rx="3" fill="#bc4b21" stroke="#22201b" stroke-width="3" />
+  <rect x="88" y="70" width="12" height="68" rx="3" fill="#bc4b21" stroke="#22201b" stroke-width="3" />
+  <!-- brass holders -->
+  <ellipse cx="66" cy="142" rx="16" ry="6" fill="#c9a24a" stroke="#22201b" stroke-width="3" />
+  <ellipse cx="94" cy="142" rx="16" ry="6" fill="#c9a24a" stroke="#22201b" stroke-width="3" />
+</svg>

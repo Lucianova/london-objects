@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- light rays -->
+  <path d="M80 42 v-14 M52 54 l-10 -10 M108 54 l10 -10" stroke="#e8a13c" stroke-width="4" stroke-linecap="round" />
+  <!-- brass half-dome shade -->
+  <path d="M44 100 A36 36 0 0 1 116 100 Z" fill="#c9a24a" stroke="#22201b" stroke-width="3" stroke-linejoin="round" />
+  <!-- wall plate -->
+  <rect x="68" y="100" width="24" height="52" rx="10" fill="#e9dfc8" stroke="#22201b" stroke-width="3" />
+  <!-- trailing plug-in cord -->
+  <path d="M80 152 C80 168 62 164 58 176" fill="none" stroke="#22201b" stroke-width="3" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- pendant cord -->
+  <path d="M80 16 v22" stroke="#22201b" stroke-width="3" stroke-linecap="round" />
+  <!-- woven rattan bell -->
+  <path
+    d="M48 118 C48 66 112 66 112 118 Z"
+    fill="#dcb27c" stroke="#22201b" stroke-width="3" stroke-linejoin="round"
+  />
+  <!-- weave stripes -->
+  <path d="M57 96 h46" stroke="#b3855a" stroke-width="4" />
+  <path d="M52 106 h56" stroke="#b3855a" stroke-width="4" />
+  <path d="M49 116 h62" stroke="#b3855a" stroke-width="4" />
+  <path d="M63 86 h34" stroke="#b3855a" stroke-width="4" />
+  <!-- bulb and striped shadow -->
+  <circle cx="80" cy="130" r="10" fill="#f2d16b" stroke="#22201b" stroke-width="3" />
+  <path d="M56 158 h10 M74 158 h10 M92 158 h10" stroke="#b3855a" stroke-width="4" stroke-linecap="round" />
+</svg>
