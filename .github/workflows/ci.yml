@@ -1,8 +1,15 @@
 # Continuous Integration
 #
 # This workflow runs automatically on every pull request (and on pushes to
-# main). If any step fails, GitHub marks the PR with a red cross and the
-# branch should not be merged until it's green again.
+# main). It is split into three jobs so you can see a real pipeline shape:
+#
+#   typecheck ─┐
+#              ├─> build
+#   test ──────┘
+#
+# "typecheck" and "test" run in parallel on separate machines. "build" only
+# starts if BOTH succeed (that's what `needs:` means). If any job fails,
+# GitHub marks the PR with a red cross and it should not be merged.
 name: CI
 
 on:
@@ -11,27 +18,45 @@ on:
     branches: [main]
 
 jobs:
-  test:
-    name: Typecheck, test & build
+  typecheck:
+    name: Typecheck
     runs-on: ubuntu-latest
     steps:
-      # 1. Download the repository's code onto the runner
+      # Every job runs on a fresh machine, so each one has to check out the
+      # code and install dependencies for itself.
       - uses: actions/checkout@v4
-
-      # 2. Install Node.js (same major version we use locally)
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
-      # 3. Install the exact dependency versions from package-lock.json
       - run: npm ci
-
-      # 4. Make sure the TypeScript compiles without errors
+      # Make sure the TypeScript compiles without errors
       - run: npm run typecheck
 
-      # 5. Run the unit tests
+  test:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Run the unit tests
       - run: npm test
 
-      # 6. Make sure the site still builds for production
+  build:
+    name: Build
+    # Wait for both jobs above — no point building if the code is broken
+    needs: [typecheck, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Make sure the site still builds for production
       - run: npm run build
