@@ -1,3 +1,5 @@
+<img src="public/logo.png" alt="London Objects logo" width="96" />
+
 # London Objects
 
 A small shop website for **London Objects** — ceramics, lighting and textiles
@@ -31,6 +33,11 @@ npm run dev        # start the site at http://localhost:5173
 
 ```
 ├── index.html                  The page shell Vite serves and builds
+├── public/
+│   ├── favicon.svg             The browser-tab icon (an arch, of course)
+│   ├── logo.png                The same mark as a PNG, used in this README
+│   └── products/               One little SVG illustration per product,
+│                               named after the product's slug
 ├── src/
 │   ├── main.ts                 Renders the page and wires up the filters
 │   ├── styles.css              All the styling

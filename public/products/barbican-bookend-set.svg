@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- books held between -->
+  <g stroke="#22201b" stroke-width="3">
+    <rect x="58" y="72" width="14" height="70" rx="2" fill="#bc4b21" />
+    <rect x="74" y="64" width="14" height="78" rx="2" fill="#e9dfc8" />
+    <rect x="90" y="78" width="14" height="64" rx="2" fill="#5a6b52" transform="rotate(6 97 110)" />
+  </g>
+  <!-- concrete arches, a nod to the estate -->
+  <path
+    d="M22 142 v-40 a16 16 0 0 1 32 0 v40 h-11 v-38 a5 5 0 0 0 -10 0 v38 z"
+    fill="#a8adb5" stroke="#22201b" stroke-width="3" stroke-linejoin="round"
+  />
+  <path
+    d="M106 142 v-40 a16 16 0 0 1 32 0 v40 h-11 v-38 a5 5 0 0 0 -10 0 v38 z"
+    fill="#a8adb5" stroke="#22201b" stroke-width="3" stroke-linejoin="round"
+  />
+  <!-- shelf line -->
+  <path d="M14 144 h132" stroke="#22201b" stroke-width="3" stroke-linecap="round" />
+</svg>

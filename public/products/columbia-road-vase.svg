@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <!-- dramatic branch -->
+  <path d="M80 100 C80 62 96 48 114 32" fill="none" stroke="#5c4a3a" stroke-width="4" stroke-linecap="round" />
+  <path d="M92 68 C102 62 110 62 120 66" fill="none" stroke="#5c4a3a" stroke-width="3" stroke-linecap="round" />
+  <ellipse cx="118" cy="30" rx="10" ry="5" fill="#7d8c5c" transform="rotate(-40 118 30)" />
+  <ellipse cx="124" cy="64" rx="9" ry="4.5" fill="#7d8c5c" transform="rotate(15 124 64)" />
+  <ellipse cx="98" cy="52" rx="8" ry="4" fill="#7d8c5c" transform="rotate(-70 98 52)" />
+  <!-- milk-glazed vase -->
+  <path
+    d="M66 96 h28 c0 18 14 26 14 46 a28 32 0 0 1 -56 0 c0 -20 14 -28 14 -46 z"
+    fill="#f4efe6" stroke="#22201b" stroke-width="3" stroke-linejoin="round"
+  />
+  <path d="M64 96 h32" stroke="#22201b" stroke-width="3" stroke-linecap="round" />
+</svg>
