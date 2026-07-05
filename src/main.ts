@@ -56,7 +56,7 @@ function render(root: HTMLElement, active: CategoryFilter): void {
     </main>
 
     <footer class="footer wrap">
-      <span>London Objects — a side project, lovingly overengineered.</span>
+      <span>London Objects 2026 — a side project, lovingly overengineered.</span>
       <span>Columbia Road, London E2</span>
     </footer>
   `
