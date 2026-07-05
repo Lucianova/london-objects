@@ -7,7 +7,7 @@ for the home, made or found around London.
 
 This repo is intentionally small and tidy: it exists partly as a real website
 and partly as a friendly playground for learning **git**, **npm**, **semantic
-versioning** and **CI pipelines**.
+versioning** and **CI pipelines**
 
 ## Getting started
 
