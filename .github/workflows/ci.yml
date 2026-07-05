@@ -1,0 +1,37 @@
+# Continuous Integration
+#
+# This workflow runs automatically on every pull request (and on pushes to
+# main). If any step fails, GitHub marks the PR with a red cross and the
+# branch should not be merged until it's green again.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    name: Typecheck, test & build
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Download the repository's code onto the runner
+      - uses: actions/checkout@v4
+
+      # 2. Install Node.js (same major version we use locally)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # 3. Install the exact dependency versions from package-lock.json
+      - run: npm ci
+
+      # 4. Make sure the TypeScript compiles without errors
+      - run: npm run typecheck
+
+      # 5. Run the unit tests
+      - run: npm test
+
+      # 6. Make sure the site still builds for production
+      - run: npm run build
