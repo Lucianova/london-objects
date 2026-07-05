@@ -59,6 +59,13 @@ export const products: Product[] = [
     hue: 210,
   },
   {
+    name: 'Shoreditch Plant Pot',
+    category: 'ceramics',
+    pricePence: 3200,
+    description: 'Speckled terracotta with a matte dip glaze. Drainage hole included.',
+    hue: 18,
+  },
+  {
     name: 'Portobello Rattan Shade',
     category: 'lighting',
     pricePence: 6800,
