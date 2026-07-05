@@ -6,7 +6,7 @@ function productCard(product: Product): string {
   return `
     <li class="card" id="${slugify(product.name)}">
       <div class="card__tile" style="--hue: ${product.hue}">
-        <span class="card__initial">${product.name[0]}</span>
+        <img class="card__img" src="/products/${slugify(product.name)}.svg" alt="" loading="lazy" />
       </div>
       <h2>${product.name}</h2>
       <div class="card__meta">
