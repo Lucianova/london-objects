@@ -2,7 +2,7 @@
 
 # London Objects
 
-A small shop website for **London Object v2** — ceramics, lighting and textiles
+A small shop website for **London Objects** — ceramics, lighting and textiles
 for the home, made or found around London.
 
 This repo is intentionally small and tidy: it exists partly as a real website
