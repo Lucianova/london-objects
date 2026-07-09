@@ -33,7 +33,10 @@ function render(root: HTMLElement, active: CategoryFilter): void {
     <header class="masthead wrap">
       <div class="masthead__row">
         <span class="masthead__mark">London <span>Objects</span></span>
-        <span class="masthead__note">Est. E2 · London</span>
+        <nav class="masthead__nav" aria-label="Pages">
+          <a href="/" aria-current="page">Shop</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
       </div>
     </header>
 

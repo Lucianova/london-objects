@@ -32,14 +32,16 @@ npm run dev        # start the site at http://localhost:5173
 ## Project structure
 
 ```
-├── index.html                  The page shell Vite serves and builds
+├── index.html                  The shop page shell Vite serves and builds
+├── contact.html                The contact page — a second URL, same idea
 ├── public/
 │   ├── favicon.svg             The browser-tab icon (an arch, of course)
 │   ├── logo.png                The same mark as a PNG, used in this README
 │   └── products/               One little SVG illustration per product,
 │                               named after the product's slug
 ├── src/
-│   ├── main.ts                 Renders the page and wires up the filters
+│   ├── main.ts                 Renders the shop page and wires up the filters
+│   ├── contact.ts              Renders the contact page and handles the form
 │   ├── styles.css              All the styling
 │   ├── data/
 │   │   └── products.ts         The product catalogue (edit me!)
@@ -47,7 +49,13 @@ npm run dev        # start the site at http://localhost:5173
 │       ├── format.ts           Price formatting and URL slugs
 │       ├── format.test.ts      ...and its unit tests
 │       ├── catalogue.ts        Filtering and sorting the catalogue
-│       └── catalogue.test.ts   ...and its unit tests
+│       ├── catalogue.test.ts   ...and its unit tests
+│       ├── contact.ts          Contact form validation rules
+│       └── contact.test.ts     ...and its unit tests
+├── cypress/
+│   └── e2e/
+│       ├── landing-page.cy.ts  End-to-end tests for the shop page
+│       └── contact-page.cy.ts  YOUR exercise sheet — pending tests to fill in
 └── .github/
     └── workflows/
         └── ci.yml              Runs typecheck + tests + build on every PR
