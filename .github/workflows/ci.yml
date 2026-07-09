@@ -3,13 +3,13 @@
 # This workflow runs automatically on every pull request (and on pushes to
 # main). It is split into three jobs so you can see a real pipeline shape:
 #
-#   typecheck ─┐
-#              ├─> build
-#   test ──────┘
+#   typecheck ─┐   ┌─> build
+#              ├───┤
+#   test ──────┘   └─> e2e
 #
-# "typecheck" and "test" run in parallel on separate machines. "build" only
-# starts if BOTH succeed (that's what `needs:` means). If any job fails,
-# GitHub marks the PR with a red cross and it should not be merged.
+# "typecheck" and "test" run in parallel on separate machines. "build" and
+# "e2e" only start if BOTH succeed (that's what `needs:` means). If any job
+# fails, GitHub marks the PR with a red cross and it should not be merged.
 name: CI
 
 on:
@@ -45,6 +45,22 @@ jobs:
       - run: npm ci
       # Run the unit tests
       - run: npm test
+
+  e2e:
+    name: End-to-end tests
+    # No point driving a browser if the code doesn't even compile
+    needs: [typecheck, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The official Cypress action (from the GitHub Actions marketplace)
+      # installs dependencies, caches the Cypress browser binary, starts the
+      # dev server, waits until it responds, then runs every spec in
+      # cypress/e2e. Pending tests are fine; failing ones turn the PR red.
+      - uses: cypress-io/github-action@v6
+        with:
+          start: npm run dev
+          wait-on: 'http://localhost:5173'
 
   build:
     name: Build
